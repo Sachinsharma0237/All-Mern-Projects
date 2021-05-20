@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+.menu {
+  height: 35px;
+  border: 1px solid greenyellow;
+}
+.menu-options {
+  height: 50px;
+  border: 1px solid darkmagenta;
+}
+.formula {
+  height: 35px;
+  border: 1px solid darkorange;
+}
+#address{
+    
+}
+.cells {
+  height: calc(100vh - 155px);
+  border: 1px solid black;
+  overflow: auto;
+}
+.row {
+  display: flex;
+}
+.cell {
+  border: 1px solid black;
+  min-width: 70px;
+  min-height: 25px;
+}
+.sheet {
+  height: 35px;
+  border: 1px solid darkviolet;
+}

@@ -1,0 +1,80 @@
+.profile{
+    display: flex;
+    justify-content: space-around;
+}
+.todayTask{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 400px;
+    margin-top: 14px;
+    border: 1px solid lime;
+    color: crimson;
+}
+.todayTask ul{
+    background: antiquewhite;
+}
+.pendingTask{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 400px;
+    margin-top: 14px;
+    border: 1px solid lime;
+    color: blue;
+}
+.pendingTask ul{
+    background: antiquewhite;
+}
+.pendingTask ul li{
+
+}
+.abandonTask{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 400px;
+    margin-top: 14px;
+    border: 1px solid lime;
+}
+.abandonTask ul{
+    background: antiquewhite;
+}
+.abandonTask ul li{
+
+}
+.completedTask{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 400px;
+    margin-top: 14px;
+    border: 1px solid lime;
+    color: darkviolet;
+}
+.completedTask ul{
+    background: antiquewhite;
+}
+.completedTask ul li{
+
+}
+.inprogressTask{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 400px;
+    margin-top: 14px;
+    border: 1px solid lime;
+    color: coral;
+}
+.inprogressTask ul{
+    background: antiquewhite;
+}
+.inprogressTask ul li{
+
+}

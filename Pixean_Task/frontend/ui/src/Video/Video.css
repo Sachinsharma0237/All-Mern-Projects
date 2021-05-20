@@ -1,0 +1,23 @@
+.video{
+    position: absolute;
+    right: 40px;
+    width: 513px;
+    border: 1px solid lightgray;
+    height: calc(100vh - 20px);
+    margin-top: 10px;
+}
+.input{
+    width: 500px;
+    border: 1px solid;
+    border-width: 12px medium;
+    margin: 4px;
+}
+.my-data{
+
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-left: 5px;
+}

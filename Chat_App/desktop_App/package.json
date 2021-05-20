@@ -1,0 +1,20 @@
+{
+  "name": "Sachin_Chat_App",
+  "version": "1.0.0",
+  "description": "Made by Sachin Sharma",
+  "main": "main.js",
+  "scripts": {
+    "package-win": "electron-packager . Sachin_Chat_App --overwrite --asar=true --platform=win32 --arch=ia32 --icon=icon.ico --prune=true --out=desktop_ChatApp --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Made by Sachin Sharma\"", 
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^11.2.3"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.2.0"
+  }
+}

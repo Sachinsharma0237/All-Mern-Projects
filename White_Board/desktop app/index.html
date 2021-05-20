@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The WhiteBoard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!---------------------Tools HTML----------------------------->  
+    <div class="tools-content">
+    <div class="tools">
+        <div class="tool active-tool" id="pencil">
+            <img src="./resources-master/Black_Pencil.svg" alt="">
+            <div class="tool-options hide" id="pencil-options">
+                <input type="range" name="pencil-size" id="pencil-size" value="1" min="1" max="40">
+                <div class="pencil-colors-1">
+                    <div class="black"></div>
+                    <div class="red"></div>
+                    <div class="blue"></div>
+                    <div class="orange"></div>
+                </div>
+                <div class="pencil-colors-2">
+                    <div class="green"></div>
+                    <div class="yellow"></div>
+                    <div class="indigo"></div>
+                    <div class="brown"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="tool" id="eraser">
+            <img src="./resources-master/Eraser.svg" alt="">
+            <div class="tool-options hide" id="eraser-options">
+                <input type="range" name="eraser-size" id="eraser-size" value="1" min="1" max="40">
+            </div>
+        </div>
+        <div class="tool" id="sticky">
+            <img src="./resources-master/StickyNote.svg" alt="">
+        </div>
+        <div class="tool" id="photo">
+            <img src="./resources-master/Photo.svg" alt="">
+            <input type="file" name="" id="photo-upload" style="display: none;">
+        </div>
+        <div class="tool" id="download">
+            <img src="./resources-master/download.svg" alt="">
+        </div>
+        <div class="tool" id="undo">
+            <img src="./resources-master/Undo.svg" alt="">
+        </div>
+        <div class="tool" id="redo">
+            <img src="./resources-master/Redo.svg" alt="">
+        </div>
+        <div class="tool" id="shape">
+            <img src="./resources-master/shapes_new.svg" alt="">
+            <input type="text" name="" id="circle-input" placeholder="I/P">
+            <div class="tool-options hide" id="shapeOptions">
+                <div class="myShape">
+                <div class="circleShape" id="shapes">
+                        <img src="./resources-master/circle.svg" alt="">
+                </div>
+                <div class="squareShape" id="shapes">
+                    <img src="./resources-master/square.svg" alt="">
+                </div>
+                <div class="ovalShape" id="shapes">
+                    <img src="./resources-master/oval.svg" alt="">
+                </div>
+                <div class="triangleShape" id="shapes">
+                    <img src="./resources-master/triangle.svg" alt="">
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="tool" id="zoom-in">
+            <img src="./resources-master/zoom-in.svg" alt="">
+        </div>
+        <div class="tool" id="zoom-out">
+            <img src="./resources-master/zoom-out.svg" alt="">
+        </div>
+        <div class="tool" id="corner">
+            <img src="./resources-master/rounded.svg" alt="">
+            <div class="tool-options hide" id="corner-options">
+            <div class="corner-type">
+                <div class="round">Round</div>
+                <div class="square">Square</div>
+                <div class="butt">Butt</div>
+            </div>
+        </div>
+        </div>
+        <div class="tool" id="printer">
+            <img src="./resources-master/printer.svg" alt="">
+        </div>
+        <div class="tool" id="trash">
+            <img src="./resources-master/trash.svg" alt="">
+        </div>
+        
+    </div>
+    </div>
+    <!---------------------Canvas HTML--------------------------->    
+    <div class="canvas">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <!--------------------Social Media--------------------------->
+    <div class="social-elements">
+    <div class="social">
+        <div class="app" id="google">
+            <a href="http://www.google.com/"><img src="./resources-master/google.svg" alt=""></a>
+        </div>
+        <div class="app" id="gmail">
+            <a href="https://mail.google.com/mail"><img src="./resources-master/gmail.svg" alt=""></a>
+        </div>
+        <div class="app" id="linkedin">
+            <a href="https://in.linkedin.com/"><img src="./resources-master/Linkedin.svg" alt=""></a>
+        </div>
+        <div class="app" id="google-drive">
+            <a href="https://www.google.com/intl/en_ca/drive/download/"><img src="./resources-master/google_drive.svg" alt=""></a>
+        </div>
+        <div class="app" id="skype">
+            <a href="https://www.skype.com/en/"><img src="./resources-master/skype.svg" alt=""></a>
+        </div>
+        <div class="app" id="dropbox">
+            <a href="https://www.dropbox.com/"><img src="./resources-master/dropbox.svg" alt=""></a>
+        </div>
+        <div class="app" id="google-maps">
+            <a href="https://www.google.com/maps"><img src="./resources-master/google_maps.svg" alt=""></a>
+        </div>
+        <div class="app" id="whatsapp">
+            <a href="https://web.whatsapp.com/"><img src="./resources-master/whatsapp_2.svg" alt=""></a>
+        </div>
+    </div>
+    </div>
+    <!------------------This is Client Side-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.0/socket.io.js" integrity="sha512-+l9L4lMTFNy3dEglQpprf7jQBhQsQ3/WvOnjaN/+/L4i0jOstgScV0q2TjfvRF4V+ZePMDuZYIQtg5T4MKr+MQ==" crossorigin="anonymous"></script>
+    <script>
+     let socket = io.connect("https://sachinsharma-whiteboard.herokuapp.com/");
+    </script>
+
+
+    <script src="./script.js"></script>
+    <script src="./tools.js"></script>
+    <script src="./sticky.js"></script>
+    <script src="./util.js"></script>
+    <script src="./image.js"></script>
+    <script src="./socket.js"></script>
+    <script src="./corner.js"></script>
+    <script src="./shapes.js"></script>
+    <script src="./zoom.js"></script>
+</body>
+</html>

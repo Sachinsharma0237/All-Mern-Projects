@@ -1,0 +1,16 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    overflow-wrap: normal;
+}
+.login img{
+    overflow: auto;
+    height: calc(100vh - 0px);
+    width: 100%;
+}
+.login button{
+    position: absolute;
+    right: 400px;
+}

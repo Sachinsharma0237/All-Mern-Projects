@@ -1,0 +1,7 @@
+gitBash
+github desktop
+vs code 
+postman
+idm
+notepad++
+vlc

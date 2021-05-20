@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+.home{
+
+}
+.input-component{
+    background: gray;
+    height: 300px;
+}
+.user-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.event-name{
+    display: flex;
+    margin: 5px;
+}
+.event-name h2{
+    margin-right: 50px;
+}
+.event-name input{
+
+}
+.event-description{
+    display: flex;
+    margin: 5px;
+}
+.event-description h2{
+    margin-right: 50px;
+}
+.event-description input{
+
+}
+.start-date{
+    display: flex;
+    margin: 5px;
+}
+.start-date h2{
+    margin-right: 50px;
+}   
+.start-date input{
+
+}
+.end-date{
+    display: flex;
+    margin: 5px;
+}
+.end-date h2{
+    margin-right: 50px;
+}
+.end-date input{
+
+}
+.organizer{
+    display: flex;
+    margin: 5px;
+}
+.organizer h2{
+    margin-right: 50px;
+}
+.organizer input{
+    
+}
+
+
+

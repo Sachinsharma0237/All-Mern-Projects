@@ -1,0 +1,95 @@
+.skin{
+  width: 50%;
+  height: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  background-color: #D0CECF;
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  right: 25%;
+}
+.left-side{
+    border: 1px solid darkgray;
+    width: 34%;
+    margin-top: 0px;
+    height: 100%;
+}
+.name{
+    text-align: center;
+    justify-content: space-between;
+    font-size: 17px;
+    margin-left: -11px;
+    margin-top: -12px;
+    display: flex;
+    color: black;
+    font-weight: bolder;
+}
+.surname{
+    text-align: center;
+    justify-content: space-between;
+    font-size: 17px;
+    margin-left: -14px;
+    margin-top: -45px;
+    display: flex;
+    color: orange;
+    font-weight: bolder;
+}
+.contact-heading{
+    border-bottom: 2px solid darkgray;
+    margin-bottom: 7px;
+    margin-left: -14px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.address{
+
+}
+.my-image{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 7px;
+}
+.my-address{
+    font-size: 12px;
+    max-width: 135px;
+    margin-bottom: 5px;
+}
+.phone{
+
+}
+.my-phone{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.email{
+
+}
+.my-email{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.email-link{
+
+}
+
+
+
+.right-side{
+    border-right: 1px solid darkgray;
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+    width: 55%;
+    top: 0px;
+    right: 0px;
+    margin-top: 0px;
+    height: 100%;
+    background: white;
+    position: absolute;
+}

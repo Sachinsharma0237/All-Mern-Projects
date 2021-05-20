@@ -1,0 +1,14 @@
+.home{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+#no-post-tag{
+    position: fixed;
+    display: flex;
+    justify-content :space-around;
+    align-items:flex-end;
+    top: 250px;
+    width: 9rem; height: 9rem;
+    color: limegreen;
+}

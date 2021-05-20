@@ -1,0 +1,224 @@
+.body{
+
+}
+.user-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 245px;
+    background: #FAF5F4;
+}
+.name{
+    display: flex;
+    margin: 6px;
+    flex-direction: column;
+    font-size: 28px;
+    cursor: auto;
+    
+}
+.name input{
+    text-align: left;
+    margin-top: 19px;
+    height: 33px;
+    width: 246px;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 16px;
+}
+#username{
+
+}
+.age{
+    display: flex;
+    margin: 6px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 28px;
+}
+.buttons{
+
+}
+.buttons button{
+    margin: 25px;
+    background: white;
+    color: black;
+    font-weight: 400;
+    font-size: 18px;
+    border: 1px;
+}
+.skin-feel{
+    background: #F4E2DC;
+    height: 274px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 28px;
+    justify-content: flex-end;
+}   
+.skin-feel div{
+    display: flex;
+}
+.cheeks{
+    top: 20px;
+    font-size: 18px;
+}
+.cheeks button{
+    margin: 25px;
+    background: white;
+    color: black;
+    font-weight: 400;
+    font-size: 18px;
+    border: 1px;;
+}
+.t-zone{
+    font-size: 18px;
+}
+.t-zone button{
+    margin: 25px;
+    background: white;
+    color: black;
+    font-weight: 400;
+    font-size: 18px;
+    border: 1px;;
+}
+#dry{
+
+}
+#normal{
+
+}
+#oily{
+
+}
+.skin-concern{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 230px;
+    background: #FAF5F4;
+    font-weight: 400;
+    font-size: 25px;
+    justify-content: center;
+}
+.concern-options{
+    font-size: 15px;
+    margin-top: 50px;
+}
+.concern-options button{
+    margin: 10px;
+    background: white;
+    color: black;
+    font-weight: 200;
+    font-size: 18px;
+    border: 1px;
+}
+.allergic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 230px;
+    background: #E6ECED;
+    font-size: 28px;
+    justify-content: space-evenly;
+}   
+.allergic button{
+    
+}
+.random-issues{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    background: #FAF5F4;
+    font-size: 28px;
+    justify-content: space-evenly;
+}
+.random-issues div{
+    font-size: 23px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 17px;
+}
+.random-options{
+
+}
+.lack-of-sleep{
+
+}
+.lack-of-sleep input{
+    width: 26px;
+    height: 26px;
+   
+}
+.lack-of-water{
+
+
+}
+.lack-of-water input{
+    width: 26px;
+    height: 26px;
+    
+}
+.stressed{
+
+}
+.stressed input{
+    width: 26px;
+    height: 26px;
+    
+}
+.pregnant{
+    
+}
+.pregnant input{
+    width: 26px;
+    height: 26px;
+   
+}
+.high-ac{
+
+}
+.high-ac input{
+    width: 26px;
+    height: 26px;
+    margin: 5px;
+}
+.senstitive-skin{
+    
+}
+.senstitive-skin input{
+    width: 26px;
+    height: 26px;
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    background: #8EA7B9;
+    font-size: 28px;
+    justify-content: space-evenly;
+}
+.email-input{
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.email-input input{
+    text-align: left;
+    margin-top: 19px;
+    height: 33px;
+    width: 300px;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 16px;
+}
+#routine{
+    margin-top: 20px;
+    background: #F4E2DC;
+    color: black;
+    font-weight: 600;
+    border-radius: 21px;
+}

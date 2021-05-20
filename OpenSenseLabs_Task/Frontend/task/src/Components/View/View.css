@@ -1,0 +1,15 @@
+.view{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.view button{
+
+}
+.firebaseData{
+    position: absolute;
+    top: 150px;
+    align-items: center;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,32 @@
+.h1-tag{
+    display: flex;
+    justify-content: center;
+}
+.home{
+    position: absolute;
+    height: calc(100vh - 20px);
+    border: 1px solid lightgray;
+    left: 20px;
+    top: 10px;
+}
+.file-input{
+    margin: 4px;
+}
+.input{
+    width: 500px;
+    border: 1px solid;
+    border-width: 12px medium;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+.image-file{
+
+}
+.image{
+    height: 456px;
+    width: 398px;
+    margin: 4px;
+}
