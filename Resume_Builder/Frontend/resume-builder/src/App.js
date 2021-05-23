@@ -68,7 +68,7 @@ class App extends Component {
         <Navbar isAuth={isAuth} logout={this.logout} ></Navbar>    
           <Switch>
           <Route path="/" exact>
-          <LandingPage></LandingPage>
+          <LandingPage isAuth={isAuth}></LandingPage>
           </Route>
 
           <Route path="/about" exact>

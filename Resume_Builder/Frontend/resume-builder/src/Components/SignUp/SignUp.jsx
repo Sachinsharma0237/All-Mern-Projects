@@ -10,7 +10,6 @@ class SignUp extends Component {
     onChangeHandler =(e)=>{
         let id = e.target.id;
         let value = e.target.value;
-        //console.log(id, value);
         this.setState({
             [id]:value
         })

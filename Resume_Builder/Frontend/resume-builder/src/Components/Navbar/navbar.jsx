@@ -6,7 +6,11 @@ class Navbar extends Component {
     render() { 
         return (  
             <div className="navbar">
-            <div className="logo"></div>
+            <Link to="/">
+            <div className="logo">
+                <img src="sachin1.png" alt="" />
+            </div>
+            </Link>
             {
                 this.props.isAuth? (
                     <div className="navlinks">
