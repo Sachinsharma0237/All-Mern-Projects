@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 import firebaseApp from "./firebase/firebaseConfig";
 import Navbar from "./Components/Navbar/navbar";
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';

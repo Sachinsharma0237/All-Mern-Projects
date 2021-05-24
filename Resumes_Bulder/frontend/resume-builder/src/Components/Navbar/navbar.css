@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     height: 90px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 2px solid black;
 }
 .logo{
     height: 90%;
@@ -11,7 +11,7 @@
 .logo img{
     object-fit: contain;
     width: 118px;
-    height: 109px;
+    height: 99px;
     margin-top: 4px;
 }
 .navlinks{

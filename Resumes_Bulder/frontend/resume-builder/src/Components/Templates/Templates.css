@@ -1,0 +1,45 @@
+.templates{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.template{
+    height: 300px;
+    width: 200px;
+    margin: 50px;
+    position: relative;
+    transition: 0.5s transform;
+}
+.template-image{
+    height: 90%;
+}
+.template-image img{
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+.choose-template{
+    position: absolute;
+    top: 50%;
+    left: 17%;
+    border: 1px solid #9b59b6;
+    padding: 5px;
+    border-radius: 20px;
+    color: #9b59b6;
+    display: none;
+}
+.choose-template:hover{
+    background: #9b59b6;
+    color: white;
+    cursor: pointer;
+}
+.template:hover .choose-template{
+    opacity: 1;
+    display: block;
+}
+.template:hover{
+    transform: scale(1.2);
+}
+.template-image img:hover{
+    opacity: 1;
+}
