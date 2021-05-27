@@ -14,6 +14,12 @@ class Templates extends Component {
         {id:"skin8", path:"./skins/skin8.svg"}
             ]
      }
+
+     handleChooseTemplate =()=>{
+         this.props.history.push("/contact");
+        //  window.location = '/contact';  //It work the same as above but it'll refresh the page
+     }
+
     render() { 
         return ( <div className="templates">
             {this.state.skins.map((skin)=>{
@@ -21,7 +27,7 @@ class Templates extends Component {
                         <div className="template-image">
                             <img src={skin.path} alt="" />
                         </div>
-                        <div className="choose-template">Choose Template</div>
+                        <div className="choose-template" onClick={this.handleChooseTemplate}>Choose Template</div>
                     </div>
             })}
         </div> );

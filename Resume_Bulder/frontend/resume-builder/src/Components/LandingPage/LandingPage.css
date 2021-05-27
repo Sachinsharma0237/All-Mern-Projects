@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+:root{
+    --primary-white: #fff;
+    --primary-blue: #50AAC4;
+    --primary-orange: #f9ab00;
+    --primary-dark: rgba(255,255,255,0);
+    --primary-red: #ef4035;
+    --primary-hover-red: #f33501;
+}
+body{
+    font-family: "Roboto Condensed" sans-serif ;
+}
 .landing{
     display: flex;
     justify-content: space-around;
@@ -14,20 +26,26 @@
 .landing-content h1{
     line-height: 80px;
     text-align: center;
-    color: orange;
-    text-decoration: underline;
+    color: #5ED1F0;
     font-size: 50px;
     position: relative;
     top: -35px;
+    
+}
+.landing-content h1:hover{
+    color: #2130C6;
 }
 .landing-content p{
-    line-height: 40px;
+    line-height: 37px;
     position: relative;
     top: 50px;
-    font-size: 40px;
+    font-size: 27px;
     font-weight: bolder;
     text-align: center;
-    color: orange;
+    color: #5ED1F0;
+}
+.landing-content p:hover{
+    color: #2130C6;
 }
 .templates{
 
@@ -39,5 +57,8 @@
     background-position: center;
     height: 85vh;
     width: 100%;
-    top: -10px;
+    top: -6px;
+}
+.btn:hover{
+    color: #2130C6;
 }

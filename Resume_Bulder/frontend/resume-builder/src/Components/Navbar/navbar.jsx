@@ -5,16 +5,22 @@ class Navbar extends Component {
     state = {  }
     render() { 
         return (  
-            <div className="navbar">
+            <div className="navbar navbar-dark bg-dark">
             <Link to="/">
             <div className="logo">
-                <img src="sachin1.png" alt="" />
+                <img src="./logo/logo.png" alt="" />
             </div>
             </Link>
             {
                 this.props.isAuth? (
                     <div className="navlinks">
                 <ul>
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/contact">Contact</Link>
+                            </li>
                             <li>
                                 <Link to="/templates">Templates</Link>
                             </li>
@@ -33,6 +39,9 @@ class Navbar extends Component {
                 (
                     <div className="navlinks">
            <ul>
+               <li>
+                    <Link to="/">Home</Link>
+               </li>
                <li>
                     <Link to="/about" >About</Link>
                </li>

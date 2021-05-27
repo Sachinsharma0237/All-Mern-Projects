@@ -9,6 +9,7 @@ import Templates from './Components/Templates/Templates';
 import Profile from './Components/Profile/Profile';
 import SignUp from './Components/SignUp/SignUp';
 import SignIn from './Components/SignIn/SignIn';
+import Contact from './Components/Contact/Contact';
 
 class App extends Component {
   state = {
@@ -76,9 +77,12 @@ class App extends Component {
           <About></About>
           </Route>
 
-          <Route path="/templates" exact>
-            { isAuth ? (<Templates></Templates>) : ( <Redirect to="/login"></Redirect> )}
+          <Route path="/contact" exact>
+          <Contact></Contact>
           </Route>
+
+          <Route path="/templates" exact component={isAuth ? Templates : SignIn}></Route>
+            {/* { isAuth ? (<Templates></Templates>) : ( <Redirect to="/login"></Redirect> )} */}
           
           <Route path="/profile" exact>
           { isAuth ? (<Profile></Profile>) : ( <Redirect to="/login"></Redirect> )}
