@@ -39,18 +39,6 @@ class App extends Component {
       })
     }
 
-    signUp = (id, pw) =>{
-      console.log(id, pw);
-      firebaseApp.auth().createUserWithEmailAndPassword(id,pw).then( obj=>{
-        console.log("Sign Up");
-        let uid = obj.user.uid;
-        let name = obj.user.name;
-        let email = obj.user.email;
-        this.setState({
-          isAuth:true
-          })  
-    })}
-
   componentDidMount(){
     firebaseApp.auth().onAuthStateChanged( (user)=>{
       console.log("Inside auth state change", user);
@@ -81,7 +69,7 @@ class App extends Component {
           <Contact></Contact>
           </Route>
 
-          <Route path="/templates" exact component={isAuth ? Templates : SignIn}></Route>
+          <Route path="/templates" exact component={Templates} ></Route>
             {/* { isAuth ? (<Templates></Templates>) : ( <Redirect to="/login"></Redirect> )} */}
           
           <Route path="/profile" exact>
