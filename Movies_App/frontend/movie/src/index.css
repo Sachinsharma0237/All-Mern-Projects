@@ -26,6 +26,8 @@ body {
 .movie-container{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .movie-info{
     display: flex;
@@ -65,6 +67,24 @@ header{
     border: 2px solid #22254b;
     border-radius: 50px;
     background-color: transparent;
-    color:#22254b;
+    color:#fff;
     padding: 0.5rem 1.5rem;
+}
+.search:focus{
+    outline: 0;
+}
+.tag{
+    background-color: #22254b;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.tag.green{
+    color: green;
+}
+.tag.orange{
+    color: orange;
+}
+.tag.red{
+    color: red;
 }

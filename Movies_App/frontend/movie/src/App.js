@@ -1,31 +1,64 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Movie from './Components/Movie/Movie';
-
-const FEATURED_API = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=0145f93fa4225b4ffcfcf44ce5ed7ac7";
-const IMG_API = "https://image.tmdb.org/t/p/w1280";
-const SEARCH_API = "https://api.themoviedb.org/3/search/movie?&api_key=0145f93fa4225b4ffcfcf44ce5ed7ac7";
+//04c35731a5ee918f014970082a0088b1
+//0145f93fa4225b4ffcfcf44ce5ed7ac7
+const FEATURED_API = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1";
+const SEARCH_API = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
 
 function App() {
   const[ movies, setMovies ] = useState([]);
+  const[ searchTerm, setSearchTerm] = useState('');
 
   useEffect(()=>{
-    fetch(FEATURED_API).then( res => res.json())
+      getMovies(FEATURED_API);
+    }, [])
+
+
+  const getMovies=(API)=>{
+    fetch(API).then( res => res.json())
     .then( data=>{
       console.log(data);
       setMovies(data.results);
     })
-    }, [])
+  }
+
+  const handleOnSubmit =(e)=>{
+    e.preventDefault();
+
+    if(searchTerm){
+        getMovies(SEARCH_API+searchTerm)
+        setSearchTerm("");
+    }
+    
+  };
+
+  const handleOnChange =(e)=>{
+    setSearchTerm(e.target.value);
+
+  };
+
+
   return (
     <div className="app">
-      
     <header>
-      <input className="search" type="text" placeholder="search..." />
+    <form onSubmit={handleOnSubmit}>
+        <input 
+        className="search" 
+        type="search" 
+        placeholder="search..." 
+        value={searchTerm}
+        onChange={handleOnChange}
+        />
+    </form>
     </header>
     <div className="movie-container">
-        { movies.length > 0 && movies.map( (movie)=>
+        { movies != null ? movies.map( (movie)=>
              <Movie key={movie.id} {...movie}></Movie>
-        )}
+        )
+        :
+        <h3>No Result Found...</h3>
+      }
     </div>
     </div>
   );
