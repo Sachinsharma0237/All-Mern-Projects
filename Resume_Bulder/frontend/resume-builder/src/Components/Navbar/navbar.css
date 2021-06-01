@@ -32,5 +32,7 @@
 }
 .navlinks ul li a:hover{
     color: #5ED1F0;
-    border-top: 0.1500rem solid var(--primary-orange);
+    border-top: 0.2rem solid var(--primary-orange);
+    margin-top: 5px;
+    transform: scale(5);
 }

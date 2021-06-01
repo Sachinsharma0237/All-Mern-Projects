@@ -33,7 +33,8 @@ class SignUp extends Component {
                 "Last Name": lname,
                 "Email": id,
                 "Password": pw,
-                "uid": uid
+                "uid": uid,
+                "resumes":[]
             })
             return userCreatedPromise;
         })

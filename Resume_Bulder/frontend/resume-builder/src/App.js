@@ -69,8 +69,10 @@ class App extends Component {
           <Contact></Contact>
           </Route>
 
-          <Route path="/templates" exact component={Templates} ></Route>
+          {/* <Route path="/templates" exact component={Templates} ></Route> */}
             {/* { isAuth ? (<Templates></Templates>) : ( <Redirect to="/login"></Redirect> )} */}
+
+          <Route path="/templates" exact render ={ (props)=>this.state.isAuth ? <Templates {...props} uid={this.state.user}></Templates> : <Redirect to="/signin"></Redirect>  } ></Route>  
           
           <Route path="/profile" exact>
           { isAuth ? (<Profile></Profile>) : ( <Redirect to="/login"></Redirect> )}
