@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./skin1.css";
-class Skin extends Component {
+class Skin1 extends Component {
     state = { 
         contactDetails: {
             fname: "SACHIN",
@@ -201,4 +201,4 @@ class Skin extends Component {
     }
 }
  
-export default Skin;
+export default Skin1;

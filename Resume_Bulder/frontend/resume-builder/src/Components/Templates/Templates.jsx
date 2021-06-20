@@ -18,12 +18,17 @@ class Templates extends Component {
      }
 
      handleChooseTemplate = async (skinId)=>{
-        let addObj = await firebaseApp.firestore().collection("resumes").add({ skinId: skinId, ...initialState });
-        let resumeId = addObj.id; 
-        let updateObj = await firebaseApp.firestore().collection("users").doc(this.props.uid).update({
+         if( !this.props.resumeId ){
+            let addObj = await firebaseApp.firestore().collection("resumes").add({ skinId: skinId, ...initialState });
+            let resumeId = addObj.id; 
+            let updateObj = await firebaseApp.firestore().collection("users").doc(this.props.uid).update({
             Resumes: firebase.firestore.FieldValue.arrayUnion(resumeId)
-        })
-        this.props.history.push("/contact");
+            })
+            this.props.history.push("/contact");
+            this.props.setResumeId(resumeId);
+        }else{
+            this.props.history.push("/contact");
+        }
      }
 
     render() { 

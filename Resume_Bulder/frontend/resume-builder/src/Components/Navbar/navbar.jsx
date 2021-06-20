@@ -18,9 +18,9 @@ class Navbar extends Component {
                             <li>
                                 <Link to="/">Home</Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link to="/contact">Contact</Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link to="/templates">Templates</Link>
                             </li>
@@ -29,6 +29,9 @@ class Navbar extends Component {
                             </li>
                             <li>
                                 <Link to="/profile">Profile</Link>
+                            </li>
+                            <li>
+                                <Link to="/myresumes">MyResumes</Link>
                             </li>
                             <li>
                                 <Link onClick ={this.props.logout} >Logout</Link>

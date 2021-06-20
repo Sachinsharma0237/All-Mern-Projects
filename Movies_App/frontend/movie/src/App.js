@@ -10,6 +10,8 @@ function App() {
   const[ movies, setMovies ] = useState([]);
   const[ searchTerm, setSearchTerm] = useState('');
 
+  
+
   useEffect(()=>{
       getMovies(FEATURED_API);
     }, [])
@@ -37,8 +39,6 @@ function App() {
     setSearchTerm(e.target.value);
 
   };
-
-
   return (
     <div className="app">
     <header>
@@ -54,7 +54,7 @@ function App() {
     </header>
     <div className="movie-container">
         { movies != null ? movies.map( (movie)=>
-             <Movie key={movie.id} {...movie}></Movie>
+             <Movie key={movie.id} {...movie} ></Movie>
         )
         :
         <h3>No Result Found...</h3>
