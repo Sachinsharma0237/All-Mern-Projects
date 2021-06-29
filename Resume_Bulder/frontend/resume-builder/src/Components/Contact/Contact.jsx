@@ -61,15 +61,15 @@ class Contact extends Component {
 
     componentDidMount=()=>{
         //get contact details of the selected Resume
-        firebaseApp.firestore().collection("resumes").doc(this.props.resumeId).get().then( doc=>{
-            console.log("Inside Component did Mount of Contact", doc.data());
-            let { contactDetails, skinId } = doc.data();
+        // firebaseApp.firestore().collection("resumes").doc(this.props.resumeId).get().then( doc=>{
+        //     console.log("Inside Component did Mount of Contact", doc.data());
+        //     let { contactDetails, skinId } = doc.data();
             
-            this.setState({
-                contactDetails,
-                skinId
-            })
-        })
+        //     this.setState({
+        //         contactDetails,
+        //         skinId
+        //     })
+        // })
     }
 
     render() { 
