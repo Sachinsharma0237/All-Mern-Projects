@@ -1,4 +1,4 @@
-let names = ['EVERYONE', 'VEGANS', 'FITNESS FREAKS', 'MEAT LOVERS', 'VEG LOVERS'];
+let names = ['कमर दर्द', 'जोड़ों में दर्द', 'दबी हुई नस खोलने का इलाज', 'मांसपेशियों में दर्द', 'लिवर के रोग'];
 let changingText = document.querySelector('#changing-text');
 let idx = 0;
 let word = names[idx];

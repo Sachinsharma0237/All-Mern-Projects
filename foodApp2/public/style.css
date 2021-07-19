@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0;
+}
+p{
+    font-weight: 300;
+    color: #111;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.1)),url(https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+}
+.banner .content{
+    max-width: 900px;
+    text-align: center;   
+}
+.banner .content h2{
+    font-size: 5em;
+    color: #fff;
+}
+.banner .content p{
+    font-size: 1em;
+    color: #fff;
+}
+.btn{
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.btn:hover{
+    letter-spacing: 6px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 40px 100px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+header .logo{
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+header .logo span{
+    color: #ff0157;
+}
+header .navigation{
+    position: relative;
+    display: flex;
+}
+header .navigation li{
+    list-style: none;
+}
+header .navigation li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    margin-left: 30px;
+}
+header .navigation li a:hover{
+    color: #ff0157;
+}
+header .sticky{
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+header .sticky .logo{
+    color: #111;
+}
+header .sticky .navigation li a{
+    color: #111;
+}
+header .sticky .navigation li a:hover{
+    color: #ff0157;
+}

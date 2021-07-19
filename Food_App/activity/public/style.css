@@ -4,11 +4,24 @@
     padding: 0px;
     font-family: 'Ubuntu', sans-serif;
 }
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}
+:root{
+    --primary-white: #fff;
+    --primary-blue: #50AAC4;
+    --primary-orange: #f9ab00;
+    --primary-dark: rgba(255,255,255,0);
+    --primary-red: #ef4035;
+    --primary-hover-red: #f33501;
+}
 .showcase{
       background-size: 100vw;
       height: 100vh;
       /* width: 100%; */
       background-image: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.1)),url(https://images.pexels.com/photos/2983098/pexels-photo-2983098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+      background-attachment: fixed;
 }
 .showcase-content {
     position: absolute;
@@ -20,8 +33,42 @@
     font-size: 350%;
 }
 .showcase-buttons{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
     color: white;
+    margin-top: 20px;
 }
+#changing-text{
+    color: #f63854;
+}
+.navlinks{
+    justify-content: flex-end;
+    display: flex;
+}
+.navlinks ul{
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-around;
+}
+.navlinks ul li{
+}   
+.navlinks ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: 25px;
+}
+.navlinks ul li a:hover{
+    border-bottom: 0.1500rem solid var(--primary-orange);
+    padding: 5px;
+    color: #f63854;
+}
+.navlinks ul li a img{ 
+    max-height: 100px;
+    max-width: 100px;
+}
+
+
+
