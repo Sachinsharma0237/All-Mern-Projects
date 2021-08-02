@@ -42,12 +42,29 @@
 #changing-text{
     color: #f63854;
 }
+.logo{
+    color: white;
+    font-size: 35px;
+    padding: 5px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    left: 0;
+    /* font-family: 'Qahiri', sans-serif; */
+}
+span{
+    color: red;
+}
 .navlinks{
     justify-content: flex-end;
     display: flex;
+    top: 0;
+    cursor: pointer;
+    position: sticky;
+    z-index: 2;
 }
 .navlinks ul{
     display: flex;
+    top: 3px;
     list-style: none;
     width: 50%;
     justify-content: space-around;
@@ -58,7 +75,7 @@
     text-decoration: none;
     color: white;
     padding: 5px;
-    font-size: 25px;
+    font-size: 20px;
 }
 .navlinks ul li a:hover{
     border-bottom: 0.1500rem solid var(--primary-orange);
@@ -69,6 +86,11 @@
     max-height: 100px;
     max-width: 100px;
 }
-
+.fixed{
+    background: white;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
 
 
