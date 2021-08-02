@@ -1,0 +1,6 @@
+[
+  { "id": 2, "plan": "North Indian", "food": "butter chicken" },
+  { "id": 3, "plan": "veg", "food": "matar panner" },
+  { "id": 4, "plan": "chinese", "food": "singapuri chowmein" },
+  { "id": 5, "plan": "thai", "food": "momos" }
+]
