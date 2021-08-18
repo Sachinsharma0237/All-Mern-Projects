@@ -4,7 +4,7 @@ const dotenv = require('dotenv').config();
 const bodyParser = require('body-parser');
 const userRouter = require('./routes/userRouter');
 const planRouter = require('./routes/planRouter');
-
+const database = require('./db/database');
 app.use( express.static('public') );
 app.use( express.json() );
 app.use( bodyParser.json());
