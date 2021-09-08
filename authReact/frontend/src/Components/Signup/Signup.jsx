@@ -9,7 +9,7 @@ class Signup extends Component {
         e.preventDefault();
 
         axios({
-            method: "post",
+            method: "POST",
             data: {
                 firstName: this.firstName,
                 lastName: this.lastName,

@@ -8,7 +8,6 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 dotenv.config();
-const SECRETCODE = process.env.SECRETCODE;
 const userModel = require('./model/user');
 
 
@@ -22,11 +21,11 @@ app.use(cors({
 }))
 
 app.use(session({
-    secret: SECRETCODE,
+    secret: "secretcode",
     resave: true,
     saveUninitialized: true
 }))
-app.use(cookieParser(SECRETCODE));
+app.use(cookieParser("secretcode"));
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -39,13 +38,10 @@ app.post("/login", (req, res, next)=>{
         if(err) throw err;
         if(!user) res.send("No User Exists");
         else{
-            req.login( (user, err)=>{
-                if(err) throw err;
                 res.send("Successfully Authenticated");
                 console.log(req.user);
-            })
         }
-    })(req, res, next)
+    })(req, res, next);
 });
 
 app.post("/signup", (req, res)=>{
@@ -73,7 +69,7 @@ app.post("/signup", (req, res)=>{
 })
 
 app.get("/user", (req, res)=>{
-    console.log(req.body);
+    res.send(req.user);
 })
 
 

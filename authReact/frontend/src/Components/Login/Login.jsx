@@ -14,7 +14,7 @@ class Login extends Component {
         console.log(data);
 
         axios({
-            method: "post",
+            method: "POST",
             data: {
                 email: this.email,
                 password: this.password,

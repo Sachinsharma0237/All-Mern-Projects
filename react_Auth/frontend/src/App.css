@@ -1,0 +1,53 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    overflow-wrap: normal;
+}
+.login button{
+    margin: auto;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: darkblue;
+    color: white;
+}
+.header{
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    width: 20%;
+    background-color:lightgray;
+    height: 50px;
+    margin: auto;
+    padding: 10px;
+}
+.link-button{
+    padding: 5px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.header{
+    background: white;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    top: 0px;
+    position: sticky;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+.nav-links{
+    width: 30%;
+}
+.nav-links ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.nav-links ul li a{
+    text-decoration: none;
+}

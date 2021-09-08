@@ -5,16 +5,19 @@ const bodyParser = require('body-parser');
 const userRouter = require('./routes/userRouter');
 const planRouter = require('./routes/planRouter');
 const database = require('./db/database');
+const cors = require("cors");
+require("express-async-errors");
+
+//########################################---MiddleWare---########################################
 app.use( express.static('public') );
 app.use( express.json() );
-app.use( bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false})); // ?
-
-
 app.use( function(req, res, next) {
     console.log("Middleware of backend");
     next();
 })
+//########################################---MiddleWare---########################################
+
+
 
 app.use("/api/user", userRouter );
 app.use("/api/plans", planRouter);
