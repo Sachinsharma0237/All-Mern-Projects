@@ -1,0 +1,110 @@
+.heading{
+    color: #32aada;
+}
+
+.otp{
+    /* position: absolute; */
+    display: flex;
+    width: 85%;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.login_using_mobileno .country_code {
+    width: 100px;
+    position: relative;
+    margin: 0 10px 30px 0;
+    display: inline-block;
+}
+
+.login_using_mobileno select {
+    width: 100%;
+    color: #484848;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 15px;
+    padding: 10px 10px 8px;
+    background: none;
+}
+
+.login_using_mobileno h3{
+    font-size: 18px;
+    color: #505050;
+    font-weight: 500;
+    margin: 0 0 15px;
+    text-align: center;
+    position: relative;
+}
+
+.login_using_mobileno p{
+    margin-bottom: 15px;
+    color: #a8a8a8;
+    padding: 0 15px;
+}
+
+.login_using_mobileno input{
+    width: 180px;
+    color: #484848;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 15px;
+    padding: 10px 10px 8px;
+    margin-bottom: 30px;
+}
+
+.otpBtn{
+    width: 130px;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 1px solid #484848;
+    font-size: 15px;
+    padding: 10px 24px;
+    margin-bottom: 7px;
+    background: #17aada;
+    border-radius: 40px;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+}
+
+.closeOTP {
+    padding: 0 8px;
+    color: #9e9a92;
+    font-size: 26px;
+    display: inline-block;
+    top: -150px;
+    right: -223px;
+    position: relative;
+    cursor: pointer;
+}
+.otpmodal{
+    justify-content: center;
+    inset: 0px;
+    display: flex;
+    z-index: 2;
+    background-color: white;
+    margin-left: 25%;
+    align-items: center;
+    width: 49% !important;
+}
+@media screen and (max-width: 400px) {
+    .closeOTP{
+        padding: 0 8px;
+        color: #9e9a92;
+        font-size: 26px;
+        display: inline-block;
+        top: -191px;
+        right: -151px;
+        position: relative;
+        cursor: pointer;
+    }
+    .heading {
+        color: #32aada;
+        margin-left: 32px;
+    }
+  }

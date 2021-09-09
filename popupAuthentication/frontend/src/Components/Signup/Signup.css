@@ -1,0 +1,139 @@
+* {box-sizing: border-box}
+
+.signupcontainer {
+  padding: 14px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.headingSignup{
+  padding: 10px 18px;
+  overflow: hidden;
+  border-bottom: 1px solid #e2e2e0;
+  margin-bottom: 0;
+  list-style-type: none;  
+}
+
+input[type=text], input[type=password], input[type=email], input[type=date], input[type=date]{
+    width: 100%;
+    padding: 6px;
+    margin: 3px 0 11px 0;
+    display: inline-block;
+    border: 1px solid;
+    background: white;
+}
+
+/* select{
+  width: 100%;
+  padding: 12px;
+  font-size: medium;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+} */
+
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: small;
+  margin: 2px 0 6px 0;
+  display: inline-block;
+  /* border: none; */
+  border-radius: 5px;
+  background: white;
+}
+
+
+input:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background: #1b1b1b;
+  color: #fff!important;
+  padding: 8px 0!important;
+  width: 100%!important;
+  border: 0 solid #c00;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: white;
+  text-align: center;
+}
+
+
+/* .signupmodal{
+  margin-left: 25%;
+  padding:4px;
+  margin-top: 20px;
+  width: 500px;
+  position: absolute;
+  height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+} */
+
+.signupmodal{
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 4px;
+  margin-top: 8px;
+  width: 500px;
+  position: absolute;
+  height: 606px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.closesignup {
+  padding: 0 8px;
+  color: #9e9a92;
+  font-size: 26px;
+  display: inline-block;
+  top: 24px;
+  right: 31px;
+  position: absolute;
+  cursor: pointer;
+}
+.checkbox_list label {
+  font-size: 13px;
+  color: #999;
+  width: auto;
+  font-weight: 500;
+  line-height: 1.4;
+  display: inline;
+}
+@media screen and (max-width: 450px) {
+  .signupcontainer {
+    padding: 16px;
+    position: absolute;
+    right: 261px;
+    width: 50%;
+  }
+}
+
+.signupcontainer input[type=text], input[type=password], input[type=email], input[type=date], input[type=date] {
+  width: 100%;
+  padding: 6px;
+  margin: 1px 0 6px 0;
+  display: inline-block;
+  border: 1px solid;
+  background: white;
+}
