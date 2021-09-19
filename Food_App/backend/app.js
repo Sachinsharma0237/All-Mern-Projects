@@ -12,8 +12,15 @@ require("express-async-errors");
 app.use( express.static('public') );
 app.use( express.json() );
 app.use( function(req, res, next) {
-    console.log("Middleware of backend");
-    next();
+    if( req.path == '/api/user/login' || req.path == '/api/user/signup' ){
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(req.body.email)){
+            next();
+        }else{
+            res.status(400).send('Bad Request');
+        }
+    }else{
+        next();
+    }
 })
 //########################################---MiddleWare---########################################
 

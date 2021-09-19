@@ -1,40 +1,37 @@
-const { modelNames } = require('mongoose');
-const { v4 : uuidv4 } = require('uuid');
 const planModel = require('../model/plan');
 
 
 //##############################-->Controllers For Plans<---###########################################
 
-module.exports.createPlans = function(req, res){
-    if( req.body == null ){
-        res.status(400).send('Bad Request');
-        return;
-    }else{
-        let {name, duration, price, ratings, discount} = req.body;
-        planModel.findOne({ 'name': name }, function(err, plan){
-            if(err) throw err;
-            if( plan != null ){ 
-                res.status(400).send("bad request");
-                process.exit();
-             }
-            if(plan == null ){
-                var insertData = {
-                    name,
-                    duration,
-                    price,
-                    ratings,
-                    discount
+module.exports.createPlans = async function(req, res){
+    try{
+            let {name, duration, price, ratings, discount} = req.body;
+            await planModel.findOne({ 'name': name }, function(err, plan){
+                if(err) throw err;
+                if( plan != null ){ 
+                    res.status(400).send("bad request");
+                    process.exit();
                 }
-                plan = new planModel(insertData);
-            }
-            res.json({
-                message:"Plan Inserted In MongoDB!",
-                plan
-            })
-            plan.save(function(err){ if(err) { console.log(err); } })
-        });
+                if(plan == null ){
+                    var insertData = {
+                        name,
+                        duration,
+                        price,
+                        ratings,
+                        discount
+                    }
+                    plan = new planModel(insertData);
+                }
+                res.json({
+                    message:"Plan Inserted In MongoDB!",
+                    plan
+                })
+                 plan.save(function(err){ if(err) { console.log(err); } })
+            });
     }
-
+    catch(err){
+        res.status(501).send("error occured");
+    }
 }
 
 module.exports.getAllPlans = function(req, res){
@@ -67,34 +64,42 @@ module.exports.getPlanById = function(req, res){
     })
 }
 
-module.exports.updatePlanById = function(req, res){
-    let { id } = req.params;
-    let updateObj = req.body;
-    
-    let filteredPlan = plans.filter( (plan)=>{
-        return plan.id == id;
-    })
-    if( filteredPlan.length ){
-        let plan = filteredPlan[0];
-        for(key in updateObj){
-            plan[key] = updateObj[key];
+module.exports.updatePlanById = async function(req, res){
+    try{
+        let id = req.params.id;
+        let {payload, data} = req.body;
+
+        let plan = await planModel.findById(id);
+        for(let key in data){
+            plan[key] = data[key];
         }
-        fs.writeFileSync('../db/plans.json', JSON.stringify(plans));
-        res.status(200).send("plan updated");
-    }else{
-        res.status(400).send("no changes found");
+        let updatedPlan = await plan.save();
+        res.json({
+            message:"Plan updated Sucessfully",
+            updatedPlan
+        })
+    }
+    catch(error){
+        res.json({
+            message:"failed to update plan!!!",
+            error: error.errors.discount.message
+        })
     }
 }
 
-module.exports.deletePlanById = function(req, res){
-    let { id } = req.params;
-    let filteredPlan = plans.filter( plan=>{
-        return plan.id != id;
-    })
-    if( filteredPlan.length == plans.length ){
-        res.status(404).send("no document found")
-    }else{
-        fs.writeFileSync('../db/plans.json', JSON.stringify(filteredPlan) );
-        res.status(200).send("plan deleted successfully");
+module.exports.deletePlanById = async function(req, res){
+    try{
+        let id = req.params.id;
+         let deletedPlan =  await planModel.findByIdAndDelete(id);
+         res.json({
+             message:"user deleted",
+             deletedPlan
+         })
+    }
+    catch(error){
+        res.json({
+            message:"failed to delete",
+            error
+        })
     }
 }
