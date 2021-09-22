@@ -60,8 +60,9 @@ module.exports.login = async(req, res)=>{
 
 module.exports.protectRoute = async(req, res, next)=>{
     try{
-        let data = req.body;
-        const payload = jwt.verify(req.body.token, process.env.SECRETKEY);
+        let {data} = req.body;
+        let token = req.headers.authorization.split(" ").pop();  //or req.body.token
+        const payload = jwt.verify(token, process.env.SECRETKEY);
         if(payload){
             req.body = {payload, data};
             next();
@@ -82,11 +83,9 @@ module.exports.protectRoute = async(req, res, next)=>{
 module.exports.isAuthorized = async function(req, res, next){
         try{    
             let {payload, data} = req.body;
-            let obj = req.body
             await userModel.findOne({"_id": payload.id}, (err, result)=>{
                 if(err) return err
                 if(result.role == 'admin'){
-                    req.body = obj;
                     next();
                 }else{
                     res.status(501).send("you don't have admin rights!");
@@ -99,4 +98,60 @@ module.exports.isAuthorized = async function(req, res, next){
                 message:"unauthorized"
             })
         }
+}
+
+module.exports.forgotPassword = async function(req, res, next){
+    try{
+        let { email } = req.body;
+        console.log(email);
+        let user = await userModel.findOne({email});
+        if(user){
+            let token = user.createPwToken();
+            console.log(token);
+            let updatedUser = await user.save({validateBeforeSave: false});
+            let resetLink = `http://localhost:5000/api/user/forgot/${token}`;
+            res.status(200)
+            .json({
+                message:"Reset link is sent to email",
+                resetLink
+            })
+        }
+        else{
+            res.status(404).send("Not found!");
+        }
+    }
+    catch(err){
+        res.status(501).json({
+            message:"Failed to forgot password",
+            err
+        })
+    }
+}
+
+module.exports.resetPassword = async function(req, res, next){
+    try{
+        const token = req.params.token;
+        const { password, confirmPassword } = req.body;
+        let user = await userModel.findOne({
+            pwToken: token,
+            tokenTime: { $gt: Date.now() }
+            })
+        if(user){
+            user.resetPasswordHandler(password, confirmPassword);
+            await user.save();
+            res.status(200).json({
+                message:"Password Reset Successfully"
+            })
+        }else{
+            res.status(200).json({
+                message:"password reset link expired!"
+            })
+        }    
+    }
+    catch(err){
+        res.status(404).json({
+            message:"error occured",
+            err
+        })
+    }
 }

@@ -179,6 +179,20 @@ app.use( function(req, res, next) {
 // app.delete('/api/plans/:id', deletePlanById )
 
 
+app.get("", checkget());
+
+function checkget(){
+    console.log("Im inside checkget");
+
+    return function(req, res){
+        res.json({
+            data:"Im inside return statement"
+        })
+    }
+}
+
+
+
 app.post('/tokenCreator', (req,res)=>{
     let {email, password} = req.body;
 

@@ -8,6 +8,7 @@ const database = require('./db/database');
 const cors = require("cors");
 require("express-async-errors");
 
+
 //########################################---MiddleWare---########################################
 app.use( express.static('public') );
 app.use( express.json() );

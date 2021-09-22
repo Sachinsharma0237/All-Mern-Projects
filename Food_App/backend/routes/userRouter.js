@@ -1,5 +1,5 @@
 const express = require("express");
-const { login, signup, protectRoute } = require("../controller/authController");
+const { login, signup, protectRoute, forgotPassword, resetPassword } = require("../controller/authController");
 const { getAllUsers, createUser, getUserById, updateUserById, deleteUserById } = require("../controller/userController");
 const userRouter = express.Router();
 
@@ -14,6 +14,8 @@ userRouter.route("")
 
 userRouter.post("/login", login)
 userRouter.post("/signup", signup)
+userRouter.post("/forgot", forgotPassword)
+userRouter.patch("/resetPassword/:token", resetPassword)
 
 
 
