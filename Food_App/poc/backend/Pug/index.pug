@@ -1,0 +1,26 @@
+doctype html 
+html 
+head 
+  title I'm Pug File 
+body 
+  h1 I'm Heading
+  p I'm a P Tag
+  p.
+    Hey Im First Line
+    Hey Im Second Line
+  p 
+    |Hey Im also first Line
+    |Hey Im also Second Line
+  .myclass Hey Im div 
+  #myId hey Im div with ID  
+  h1.myClass I'm H1
+  a(href="www.google.com") go to google
+  img(src="")
+  -const classes = ["h1", "sm", "blue"]
+  p(class=classes)
+  -const items = ["mobiles", "laptops", "watches"];
+  ul   
+    for item in items 
+     li=item 
+    else 
+     li noitems

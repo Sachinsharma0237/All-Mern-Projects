@@ -103,7 +103,7 @@ module.exports.isAuthorized = async function(req, res, next){
 module.exports.forgotPassword = async function(req, res, next){
     try{
         let { email } = req.body;
-        console.log(email);
+        
         let user = await userModel.findOne({email});
         if(user){
             let token = user.createPwToken();
