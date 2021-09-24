@@ -42,17 +42,31 @@
 #changing-text{
     color: #f63854;
 }
-.logo{
+/* .logo{
     color: white;
     font-size: 35px;
     padding: 5px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     position: absolute;
     left: 0;
-    /* font-family: 'Qahiri', sans-serif; */
+    font-family: 'Qahiri', sans-serif;
+} */
+.logo{
+    position: absolute;
+    left: 9px;
+    width: 50px;
+    height: 51px;
+}
+.logo-text{
+    top: 17px;
+    right: -68px;
+    font-size: 23px;
+    position: relative;
+    color: white;
+    font-family: 'Stick No Bills', sans-serif;
 }
 span{
-    color: red;
+    color: #f63854;
 }
 .navlinks{
     justify-content: flex-end;

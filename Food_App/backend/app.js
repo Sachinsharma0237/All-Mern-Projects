@@ -6,6 +6,7 @@ const userRouter = require('./routes/userRouter');
 const planRouter = require('./routes/planRouter');
 const database = require('./db/database');
 const cors = require("cors");
+const { viewRouter } = require('./routes/viewRouter');
 require("express-async-errors");
 
 
@@ -29,10 +30,7 @@ app.use( function(req, res, next) {
 
 app.use("/api/user", userRouter );
 app.use("/api/plans", planRouter);
-
-app.get('/', (req, res)=>{
-    res.status(200).send("It's Working !!!");
-})
+app.use("/", viewRouter);
 
 app.listen( process.env.PORT, (req, res)=>{
     console.log(`Server listening at port no ${process.env.PORT}`)

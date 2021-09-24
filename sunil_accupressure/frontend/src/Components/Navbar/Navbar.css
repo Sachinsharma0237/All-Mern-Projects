@@ -1,0 +1,81 @@
+:root{
+    --primary-white: #fff;
+    --primary-blue: #50AAC4;
+    --primary-orange: #f9ab00;
+    --primary-dark: rgba(255,255,255,0);
+    --primary-red: #ef4035;
+    --primary-hover-red: #f33501;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    z-index: 2;
+    height: 100px;
+}
+
+.logo{
+    font-size: large;
+    width: 20%;
+    display: flex;
+    color: white;
+    right: 386px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 26%;
+    border: 3px solid white;
+    border-radius: 50px;
+    margin: 5px;
+}
+.nav-list{
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: black;
+}
+.nav-list li{
+    padding: 21px 30px;
+    list-style: none;
+}
+.nav-list li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+.nav-list li a:hover{
+    /* color: gray; */
+    color: orange;
+}
+.logo:hover{
+    color: orange;
+}
+.rightNav{
+    width: 30%;
+    text-align: right;
+    padding: 0.23px;
+}
+#search{
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid gray;
+    border-radius: 9px;
+}
+.contact-details{
+    color: orange;
+    display: flex;
+    position: absolute;
+    top: 8px;
+    right: 28px;
+    z-index: 3;
+    justify-content: center;
+    align-items: flex-end;
+}
