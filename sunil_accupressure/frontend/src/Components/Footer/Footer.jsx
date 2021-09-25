@@ -5,8 +5,8 @@ class Footer extends Component {
   state = {};
   render() {
     return (
-        <footer class="background">
-        <p class="text-footer">
+        <footer className="background">
+        <p className="text-footer">
             Copyright &copy; 2020 www.vedaccupressure.com - All Rights Reserved
         </p>
         </footer>

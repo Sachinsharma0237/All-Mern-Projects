@@ -3,6 +3,12 @@ import './Home.css';
 
 class Home extends Component {
   state = {};
+
+  onClickHandler=(e)=>{
+      let id = e.target.id;
+      window.location = `/${id}`;
+  }
+
   render() {
     return (
         <section className="background firstSection" id="home">
@@ -21,8 +27,8 @@ class Home extends Component {
                 the tension; increases blood circulation and reducing the pain whatsoever. We have a vast domain expertise in providing best acupressure services to our patients who are suffering from one disorder or the other.
                 </p>
                 <div className="buttons">
-                    <button className="btn btn-warning" >Contact Us!</button>
-                    <button className="btn btn-info">Know More</button>
+                    <button id="contact" onClick={(e)=>this.onClickHandler(e)}  className="btn btn-warning" >Contact Us!</button>
+                    <button id="about" onClick={(e)=>this.onClickHandler(e)} className="btn btn-info">Know More</button>
                 </div>
                 </div>
                 {/* <div className="secondHalf">

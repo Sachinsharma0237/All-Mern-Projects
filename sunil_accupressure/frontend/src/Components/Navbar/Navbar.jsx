@@ -6,14 +6,14 @@ class Navbar extends Component {
     state = {  }
     render() {
         return (
-                <nav class="navbar background h-nav-resp">
+                <nav className="navbar background h-nav-resp">
                     <div className="contact-details">
                     <i className="fas fa-phone" id="phn">9871429687,8882545242</i>
                     </div>
-                    <ul class="nav-list v-class-resp">
+                    <ul className="nav-list v-class-resp">
                         <li>
                         <Link to="/">
-                            <div class="logo"> <span>वैद्य </span><strong> Acupressure</strong> </div>
+                            <div className="logo"> <span>वैद्य </span><strong> Acupressure</strong> </div>
                         </Link>
                         </li>
 
@@ -33,10 +33,10 @@ class Navbar extends Component {
                             <Link to="/contact">Contact Us</Link>
                         </li>
                     </ul>
-                <div class="burger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+                <div className="burger">
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
                 </div>
                 </nav>
         );
