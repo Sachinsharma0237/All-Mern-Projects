@@ -8,6 +8,8 @@ import Footer from "./Components/Footer/Footer";
 import Query from "./Components/Query/Query";
 import axios from 'axios';
 import Contact from "./Components/Contact/Contact";
+import CardList from "./Components/Cardlist/Cardlist";
+import About from "./Components/About/About";
 
 class App extends Component {
 
@@ -63,11 +65,11 @@ class App extends Component {
                 <Footer/>
               </Route>
               <Route path="/about" exact>
-                
+                <About/>
               </Route>
 
               <Route path="/treatment" exact>
-                
+                <CardList/>
               </Route>
               
               <Route path="/query" exact>

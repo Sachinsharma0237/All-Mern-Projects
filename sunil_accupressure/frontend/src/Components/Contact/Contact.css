@@ -1,5 +1,28 @@
 
 .contact{
+    position: relative;
+    height: 300px;
+    top: 1px;
     display: flex;
-    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 100%;
+    margin-top: -3px;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px;
+    background: white;
+}
+.vistingContact{
+    width: 709px;
+    height: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -192px;
+    margin-top: 10px;
+}
+#contactUs{
+    top: 0px;
+    background: white;
 }

@@ -1,0 +1,55 @@
+.sunil{
+    vertical-align: middle;
+    height: 472px;
+    width: 270px;
+    position: absolute;
+    border: 1px solid;
+    top: 114px;
+    right: 75px;
+    cursor: pointer;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+}
+.sunil:hover {
+    transform: scale(1.05);
+  }
+.data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: silver;
+}
+.about{
+    height: 100vh;
+    background-size: cover;
+    background-blend-mode: darken;
+    background: rgba(0, 0, 0, 0.7) url("https://wallpaperaccess.com/full/191519.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    top: 0px;
+    position: absolute;
+}
+.para{
+    width: 40%;
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.name{
+    width: 40%;
+    font-size: 50px;
+    color: green;
+    cursor: pointer;
+}
+.dest{
+    width: 40%;
+    font-size: 30px;
+    cursor: pointer;
+    color: green;
+}

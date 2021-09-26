@@ -29,3 +29,20 @@
     border-radius: 26px;
     margin-top: 19px;
 }
+.head{
+    position: absolute;
+    top: 0px;
+}
+.details{
+    position: relative;
+    top: 0px;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#fab{
+    font-size:xx-large;
+    cursor: pointer;
+}

@@ -103,7 +103,8 @@ class Query extends Component {
                 <input type="tel" id="phone" className="form-control" placeholder="phone no"
                 value={phone} required
                 onChange={ (e) => this.onChangeHandler(e) } />
-
+                
+                <br/>
                 <label htmlFor="dob"><b>Select Date of Birth*</b></label>
                 <input type="date" id="dob" className="form-control" placeholder="Select Date of Birth*"
                 value={dob} required

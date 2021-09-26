@@ -143,6 +143,21 @@ class Content extends Component {
                 <img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/woman-measuring-stomach-1296x728.jpg?w=1155&h=1528" alt="" className="imgFluid"/>
                 </div>
             </section>
+
+            <section className="section" id="contactUs">
+                <h1 className="head">Contact Us</h1>
+                <div className="details">
+                    <p>Phone No.: 9871429687, 8882545242</p>
+                    <p>Email: sunil1touchsolution@gmail.com</p>
+                    <p>Address: B/251A, Street No 13, Tomar Colony, Burari, Delhi-110084</p>
+                    <div className="icons">
+                    <a href="http://www.facebook.com"><i id="fab" class="fab fa-facebook"></i></a>
+                    <a href="http://www.instagram.com"><i id="fab" class="fab fa-instagram"></i></a>
+                    <a href="http://www.youtube.com"><i id="fab" class="fab fa-youtube"></i></a>
+                    <a href="http://www.linkedin.com"><i id="fab" class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </section>
             </div>
         );
     }

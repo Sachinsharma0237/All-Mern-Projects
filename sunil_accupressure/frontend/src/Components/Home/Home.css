@@ -14,10 +14,10 @@ html{
     background: rgba(0, 0, 0, 0.7) url("https://images.unsplash.com/photo-1509079629765-8c81a0dfe49b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxMTQ3NjQzfHxlbnwwfHx8fA%3D%3D&w=1000&q=80");
 }
 .firstSection{
-    height: 95vh;
+    height: 90vh;
     background-size: cover;
     background-blend-mode: darken;
-    background: rgba(0, 0, 0, 0.7) url("https://wallpaperaccess.com/full/139060.jpg");
+    background: rgba(0, 0, 0, 0.7) url("https://www.teahub.io/photos/full/312-3121372_cropped-yoga.jpg");
 }
 .box-main{
     display: flex;

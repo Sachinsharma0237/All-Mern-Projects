@@ -4,6 +4,7 @@
 /* Add padding to containers */
 .container {
   padding: 16px;
+  width: 50%;
 }
 
 /* Full-width input fields */
