@@ -1,5 +1,5 @@
+const { client } = require('../db/redis');
 const planModel = require('../model/plan');
-
 
 //##############################-->Controllers For Plans<---###########################################
 
@@ -42,6 +42,7 @@ module.exports.getAllPlans = function(req, res){
             process.exit();
         }
         if( plans != null ){
+            client.setex('postData', 60, JSON.stringify(plans))
             res.json({
                 message: "got all plans",
                 plans
@@ -49,6 +50,22 @@ module.exports.getAllPlans = function(req, res){
         }
     })
 }
+
+module.exports.redisPost = (req, res, next)=>{
+    client.get('postData', (err, redisData)=>{
+        if(err) throw err;
+        if(redisData){
+            console.log("Fetching data...(from REDIS)");
+            res.status(200).json({
+                data: JSON.parse(redisData)
+            })
+        }else{
+            console.log("Fetching data...(from main API)");
+            next();
+        }
+    })
+}
+
 
 module.exports.getPlanById = function(req, res){
     let { id } = req.params;

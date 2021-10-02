@@ -147,9 +147,9 @@ class Content extends Component {
             <section className="section" id="contactUs">
                 <h1 className="head">Contact Us</h1>
                 <div className="details">
-                    <p>Phone No.: 9871429687, 8882545242</p>
-                    <p>Email: sunil1touchsolution@gmail.com</p>
-                    <p>Address: B/251A, Street No 13, Tomar Colony, Burari, Delhi-110084</p>
+                    <p><strong>Phone No.:</strong> 9871429687, 8882545242</p>
+                    <p><strong>Email:</strong> sunil1touchsolution@gmail.com</p>
+                    <p><strong>Address:</strong> B/251A, Street No 13, Tomar Colony, Burari, Delhi-110084</p>
                     <div className="icons">
                     <a href="http://www.facebook.com"><i id="fab" class="fab fa-facebook"></i></a>
                     <a href="http://www.instagram.com"><i id="fab" class="fab fa-instagram"></i></a>

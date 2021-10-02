@@ -1,10 +1,10 @@
 const express = require('express');
 const { protectRoute, isAuthorized, isAdmin } = require('../controller/authController');
-const { getAllPlans, createPlans, getPlanById, updatePlanById, deletePlanById } = require('../controller/planController');
+const { getAllPlans, createPlans, getPlanById, updatePlanById, deletePlanById, redisPost } = require('../controller/planController');
 const planRouter = express.Router();
 
 planRouter.route("")
-.get(getAllPlans)
+.get(redisPost, getAllPlans)
 .post(createPlans);
 
 
