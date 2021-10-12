@@ -6,9 +6,9 @@ const userRouter = require('./routes/userRouter');
 const planRouter = require('./routes/planRouter');
 const database = require('./db/database');
 const cors = require("cors");
-const { viewRouter } = require('./routes/viewRouter');
+const viewRouter = require('./routes/viewRouter');
 require("express-async-errors");
-
+const path = require("path");
 
 //########################################---MiddleWare---########################################
 app.use( express.static('public') );
@@ -24,6 +24,8 @@ app.use( function(req, res, next) {
         next();
     }
 })
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "view"));
 //########################################---MiddleWare---########################################
 
 
@@ -31,6 +33,7 @@ app.use( function(req, res, next) {
 app.use("/api/user", userRouter );
 app.use("/api/plans", planRouter);
 app.use("/", viewRouter);
+
 
 app.listen( process.env.PORT, (req, res)=>{
     console.log(`Server listening at port no ${process.env.PORT}`)
