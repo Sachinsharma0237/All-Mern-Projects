@@ -8,3 +8,7 @@ module.exports.getDemoPage = function(req, res, next){
 module.exports.getHomePage = function(req, res, next){
     res.render("homepage.pug", {title:"Home Page", content:""});
 }   
+
+module.exports.getLoginPage = function(req, res, next){
+    res.render("login.pug");
+}
