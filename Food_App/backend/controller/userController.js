@@ -1,4 +1,5 @@
 const bcrypt = require('bcryptjs');
+const userModel = require('../model/user');
 const User = require('../model/user');
 
 //---------------------Controllers For User-------------------------------------------------------
@@ -132,6 +133,30 @@ module.exports.deleteUserById = async function(req, res){
         res.json({
             message:"failed to delete",
             error
+        })
+    }
+}
+
+module.exports.updateProfilePhoto = async function(req ,res, next){
+    try{
+        let file = req.file;
+        console.log(file);
+        let imagePath = file.destination + "/" + file.filename;
+        imagePath = imagePath.substring(6);
+        console.log(imagePath);
+        let id = req.id;
+        let user = await userModel.findById(id);
+        console.log(user);
+        user.pImage = imagePath;
+        let x = await user.save();
+        res.json({
+            message:"Profile Image Updated!"
+        })
+    }
+    catch(err){
+        res.status(200).json({
+            message:"failed to update photo",
+            err
         })
     }
 }

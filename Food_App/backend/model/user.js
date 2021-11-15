@@ -62,6 +62,10 @@ const userSchema = new Schema({
       },
       city: {
             type: String,
+      },
+      pImage: {
+            type: String,
+            default:"/img/user/default.jpg"
       }
       },
       {

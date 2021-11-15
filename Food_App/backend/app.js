@@ -9,10 +9,12 @@ const cors = require("cors");
 const viewRouter = require('./routes/viewRouter');
 require("express-async-errors");
 const path = require("path");
+const cookieParser = require('cookie-parser');
 
 //########################################---MiddleWare---########################################
-app.use( express.static('public') );
+app.use( express.static(__dirname+'/public'));
 app.use( express.json() );
+app.use(cookieParser());
 app.use( function(req, res, next) {
     if( req.path == '/api/user/login' || req.path == '/api/user/signup' ){
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(req.body.email)){
@@ -27,7 +29,6 @@ app.use( function(req, res, next) {
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "view"));
 //########################################---MiddleWare---########################################
-
 
 
 app.use("/api/user", userRouter );

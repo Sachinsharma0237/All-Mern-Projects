@@ -1,7 +1,7 @@
 extends base.pug
 block header 
   .showcase 
-   include header.pug
+   include homepageHeader.pug
    .showcase-content
     h1 MEAL PLANS.
     h1
@@ -49,3 +49,7 @@ block content
       .step-container.clear-fix
         .step-val 3
         p.howto-para Enjoy your meal after less than 20 minutes. See you the next time!
+  section.signup
+  .signup-parent
+   each plan in plans
+    include planCard.pug
