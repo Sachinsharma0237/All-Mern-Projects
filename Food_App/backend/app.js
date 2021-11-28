@@ -10,6 +10,7 @@ const viewRouter = require('./routes/viewRouter');
 require("express-async-errors");
 const path = require("path");
 const cookieParser = require('cookie-parser');
+const { bookingRouter } = require('./routes/bookingRouter');
 
 //########################################---MiddleWare---########################################
 app.use( express.static(__dirname+'/public'));
@@ -30,7 +31,7 @@ app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "view"));
 //########################################---MiddleWare---########################################
 
-
+app.use("/api/booking", bookingRouter);
 app.use("/api/user", userRouter );
 app.use("/api/plans", planRouter);
 app.use("/", viewRouter);
