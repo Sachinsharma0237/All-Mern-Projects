@@ -17,7 +17,7 @@ html{
     height: 90vh;
     background-size: cover;
     background-blend-mode: darken;
-    background: rgba(0, 0, 0, 0.7) url("https://www.teahub.io/photos/full/312-3121372_cropped-yoga.jpg");
+    background: rgba(0, 0, 0, 0.7) url("https://wallpaperaccess.com/full/139060.jpg");
 }
 .box-main{
     display: flex;
@@ -114,4 +114,8 @@ html{
 span{
     color: red;
     margin: 2px
+}
+
+@media screen and (max-width: 800px) {
+    
 }

@@ -1,5 +1,6 @@
 const express = require("express");
 const stripe = require("stripe");
+const { protectRoute } = require("../controller/authController");
 const planModel = require("../model/plan");
 const userModel = require("../model/user");
 const stripeObj = stripe("pk_test_51Jw3ZNSHiXulIbukZ3aeHNyaLO4k6u5oB7UmuSVgzMrUTdX1YvCsouVJRyra3brhHbJYRcA4yZOS7cwiGT4TzoQ3002OD6Wfl7");
@@ -42,7 +43,7 @@ bookingRouter.post("/createPaymentSession", async function(req, res){
     }
 })
 
-bookingRouter.post("/createPaymentSession", protectRoute, )
+bookingRouter.post("/createPaymentSession", protectRoute )
 
 
 module.exports.bookingRouter = bookingRouter;
