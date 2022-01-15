@@ -3,8 +3,10 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 import About from './Views/About/About';
 import Services from './Views/Services/Services';
 import Contact from './Views/Contact/Contact';
-import Navbar from './Views/Navbar/Navbar';
 import HomePage from './Views/Home/HomePage';
+import Navbar from './Views/Navbar/Navbar';
+import './App.css';
+import Header from './Views/Navbar/Header';
 
 class App extends Component {
 
@@ -13,6 +15,7 @@ class App extends Component {
                 <Router>
                  <div className="app">
                     <Navbar/>
+                    {/* <Header/> */}
                     <Switch>
                         <Route path="/" exact>
                             <HomePage/>

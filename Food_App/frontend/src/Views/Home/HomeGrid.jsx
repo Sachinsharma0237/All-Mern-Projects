@@ -2,6 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
+import { Typography } from '@material-ui/core';
 
 const item = {
   display: 'flex',
@@ -32,10 +33,10 @@ export default function HomeGrid() {
                 alt="suitcase"
                 sx={{ height: 55 }}
               />
-              <h6 variant="h6" sx={{ my: 5 }}>
+              <Typography variant="h6" sx={{ my: 5 }}>
                 The best luxury hotels
-              </h6>
-              <h5 variant="h5">
+              </Typography>
+              <Typography variant="h5">
                 {
                   'From the latest trendy boutique hotel to the iconic palace with XXL pool'
                 }
@@ -43,7 +44,7 @@ export default function HomeGrid() {
                 {
                   ', go for a mini-vacation just a few subway stops away from your home.'
                 }
-              </h5>
+              </Typography>
             </Box>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -54,16 +55,16 @@ export default function HomeGrid() {
                 alt="graph"
                 sx={{ height: 55 }}
               />
-              <h6 variant="h6" sx={{ my: 5 }}>
+              <Typography variant="h6" sx={{ my: 5 }}>
                 New experiences
-              </h6>
-              <h5 variant="h5">
+              </Typography>
+              <Typography variant="h5">
                 {
                   'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '
                 }
 
                 {'your Sundays will not be alike.'}
-              </h5>
+              </Typography>
             </Box>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -74,13 +75,13 @@ export default function HomeGrid() {
                 alt="clock"
                 sx={{ height: 55 }}
               />
-              <h6 variant="h6" sx={{ my: 5 }}>
+              <Typography variant="h6" sx={{ my: 5 }}>
                 Exclusive rates
-              </h6>
-              <h5 variant="h5">
+              </Typography>
+              <Typography variant="h5">
                 {'By registering, you will access specially negotiated rates '}
                 {'that you will not find anywhere else.'}
-              </h5>
+              </Typography>
             </Box>
           </Grid>
         </Grid>

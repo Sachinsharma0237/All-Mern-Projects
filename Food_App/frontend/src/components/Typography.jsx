@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { Theme } from '@mui/material/styles';
-import { withStyles, WithStyles } from '@mui/styles';
-import MuiTypography, { TypographyProps } from '@mui/material/Typography';
+import PropTypes from 'prop-types';
 
-const markStyleMapping: {
-  [index: string]: { [subindex: string]: string };
-} = {
+import { withStyles } from '@mui/styles';
+import MuiTypography from '@mui/material/Typography';
+
+const markStyleMapping = {
   center: {
     h1: '',
     h2: 'markedH2Center',
@@ -32,39 +31,36 @@ const markStyleMapping: {
   },
 };
 
-const styles = (theme: Theme) => ({
+const styles = (theme) => ({
   [markStyleMapping.center.h2]: {
     height: 4,
     width: 73,
     display: 'block',
-    margin: `auto 0`,
+    margin: `${theme.spacing(1)} auto 0`,
     backgroundColor: theme.palette.secondary.main,
   },
   [markStyleMapping.center.h3]: {
     height: 4,
     width: 55,
     display: 'block',
-    margin: ` auto 0`,
+    margin: `${theme.spacing(1)} auto 0`,
     backgroundColor: theme.palette.secondary.main,
   },
   [markStyleMapping.center.h4]: {
     height: 4,
     width: 55,
     display: 'block',
-    margin: ` auto 0`,
+    margin: `${theme.spacing(1)} auto 0`,
     backgroundColor: theme.palette.secondary.main,
   },
   [markStyleMapping.left.h6]: {
     height: 2,
     width: 28,
     display: 'block',
+    marginTop: theme.spacing(0.5),
     background: 'currentColor',
   },
 });
-
-interface ExtraTypographyProps {
-  marked?: 'center' | 'left' | 'none';
-}
 
 const variantMapping = {
   h1: 'h1',
@@ -76,11 +72,7 @@ const variantMapping = {
   subtitle1: 'h3',
 };
 
-function Typography<C extends React.ElementType>(
-  props: TypographyProps<C, { component?: C }> &
-    WithStyles<typeof styles> &
-    ExtraTypographyProps,
-) {
+function Typography(props) {
   const { children, variant, classes, marked = 'none', ...other } = props;
 
   let markedClassName = '';
@@ -95,5 +87,37 @@ function Typography<C extends React.ElementType>(
     </MuiTypography>
   );
 }
+
+Typography.propTypes = {
+  /**
+   * The content of the component.
+   */
+  children: PropTypes.node,
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: PropTypes.object.isRequired,
+  marked: PropTypes.oneOf(['center', 'left', 'none']),
+  /**
+   * Applies the theme typography styles.
+   * @default 'body1'
+   */
+  variant: PropTypes.oneOf([
+    'body1',
+    'body2',
+    'button',
+    'caption',
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'inherit',
+    'overline',
+    'subtitle1',
+    'subtitle2',
+  ]),
+};
 
 export default withStyles(styles)(Typography);
