@@ -1,10 +1,9 @@
 import React from 'react'
 
-export default function Services(){
-
+export default function HomeCustomer(){
     return(
         <div>
-            Im Services
+            
         </div>
     )
 }

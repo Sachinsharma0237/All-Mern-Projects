@@ -64,8 +64,8 @@ const Navbarmenu = () => {
                     <li  className="menu-item" >
                         <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </NavLink> 
                     </li>
-                    <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`therapy`}>Therapies</NavLink> </li>
                     <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/about`}> About Us</NavLink> </li>
+                    <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/therapy`}>Therapies</NavLink> </li>
                     <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link to="#"> Gallery <FiChevronDown /> </Link>
                         <ul className={boxClassSubMenu.join(' ')} > 
                             <li> <NavLink onClick={toggleClass} activeClassName='is-active'  to={`/photo`}>Photo Gallery</NavLink> </li>
